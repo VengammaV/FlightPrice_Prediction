@@ -1,14 +1,14 @@
 import pandas as pd
 import pickle
 import os
+import joblib
 
-MODEL_PATH = "flight_pred_light.pkl"  # change here if needed
+MODEL_PATH = "flight_stream.pkl"  # change here if needed
 
 if not os.path.exists(MODEL_PATH):
     raise FileNotFoundError(f"Model file '{MODEL_PATH}' not found!")
 
-with open(MODEL_PATH, "rb") as file:
-    model = pickle.load(file)
+model = joblib.load(MODEL_PATH)
 
 def calculate_duration_hours(d_h, d_m, a_h, a_m):
     total_dep_min = d_h*60 + d_m
