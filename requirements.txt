@@ -7,4 +7,3 @@ xgboost==3.0.1
 openpyxl
 scikit-learn==1.6.1
 plotly
-pickle
