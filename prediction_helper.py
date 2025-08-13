@@ -2,7 +2,7 @@ import pandas as pd
 import pickle
 
 with open("flight_pred_light.pkl",'rb') as file:
-  model = pickle.load(file )
+  model = pickle.load(file)
 
 def calculate_duration_hours(d_h, d_m, a_h, a_m):
     total_dep_min = d_h*60 + d_m
